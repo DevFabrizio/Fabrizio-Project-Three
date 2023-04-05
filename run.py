@@ -1,6 +1,7 @@
 import time
 import sys
 import data
+import os
 
 
 def typing_print(text, t):
@@ -14,6 +15,13 @@ def typing_print(text, t):
         sys.stdout.flush()
         time.sleep(t)
     return ''
+
+
+def clear_screen():
+    """
+    Function to clear the screen
+    """
+    os.system('clear')
 
 
 typing_print(data.RULES, 0.02)
@@ -30,3 +38,5 @@ while True:
         typing_print('You must enter a valid name!\n', 0.02)
 
 time.sleep(2)
+
+clear_screen()
