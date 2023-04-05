@@ -44,3 +44,4 @@ while True:
     else:
         typing_print('You must enter a valid name!\n', 0.02)
 
+time.sleep(2)
