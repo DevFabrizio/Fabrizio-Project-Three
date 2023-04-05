@@ -16,21 +16,6 @@ def typing_print(text, t):
     return ''
 
 
-# def typing_input(text, t):
-
-#     """
-#     Function to substitute the normal imput function with a slow 
-#     typing effect
-#     """
-
-#     for character in text:
-#         sys.stdout.write(character)
-#         sys.stdout.flush()
-#         time.sleep(t)
-#     value = input()
-#     return value
-
-
 typing_print(data.RULES, 0.02)
 
 USER = ''
