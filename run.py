@@ -45,4 +45,17 @@ rows = int(input(typing_print('How many rows would you like on the grid? ', 0.02
 
 columns = int(input(typing_print('How many columns would you like on the grid? ', 0.02)))
 
-# def create_grid(rows, columns)
+user_rows = []
+
+user_columns = []
+
+def create_grid(rows, columns):
+    for i in range(rows):
+        row = []
+        for j in range(columns):
+            row.append('-')
+        print(' | '.join(row))
+
+create_grid(rows, columns)
+
+
