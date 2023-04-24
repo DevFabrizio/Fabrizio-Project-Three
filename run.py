@@ -40,3 +40,9 @@ while True:
 time.sleep(2)
 
 clear_screen()
+
+rows = int(input(typing_print('How many rows would you like on the grid? ', 0.02)))
+
+columns = int(input(typing_print('How many columns would you like on the grid? ', 0.02)))
+
+# def create_grid(rows, columns)
