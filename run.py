@@ -63,12 +63,13 @@ for i in range(rows):
     computer_grid.append(computer_row)
 
 def print_grid():
+    print(f"         {USER}'s Grid                              Enemy's Grid")
     for i in range(rows):
-        print(' | '.join(user_grid[i]) + '      ' + ' | '.join(computer_grid[i]))
+        print(str(i + 1) + ' ' + ' | '.join(user_grid[i]) + '      ' + str(i + 1) + ' ' + ' | '.join(computer_grid[i]))
 
 print_grid()
 
-
+# posiziona le lettere per la battglia navale e poi prova ad accedere alle singole liste per posizionare le navi
 
 
 
