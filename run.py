@@ -44,18 +44,51 @@ clear_screen()
 rows = int(input(typing_print('How many rows would you like on the grid? ', 0.02)))
 
 columns = int(input(typing_print('How many columns would you like on the grid? ', 0.02)))
+print()
 
-user_rows = []
 
-user_columns = []
+"""
+Creates a grid to play the game
+"""
+user_grid = []
+computer_grid = []
 
-def create_grid(rows, columns):
+for i in range(rows):
+    user_row = []
+    computer_row = []
+    for j in range(columns):
+        user_row.append('-')
+        computer_row.append('-')
+    user_grid.append(user_row)
+    computer_grid.append(computer_row)
+
+def print_grid():
     for i in range(rows):
-        row = []
-        for j in range(columns):
-            row.append('-')
-        print(' | '.join(row))
+        print(' | '.join(user_grid[i]) + '      ' + ' | '.join(computer_grid[i]))
 
-create_grid(rows, columns)
+print_grid()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
