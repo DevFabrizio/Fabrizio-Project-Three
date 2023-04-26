@@ -42,9 +42,7 @@ time.sleep(2)
 
 clear_screen()
 
-# rows = int(input(typing_print('How many rows would you like on the grid? ', 0.02)))
 
-# columns = int(input(typing_print('How many columns would you like on the grid? ', 0.02)))
 print()
 
 grid_size = 8
