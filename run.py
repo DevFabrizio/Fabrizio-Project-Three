@@ -42,6 +42,10 @@ time.sleep(2)
 
 clear_screen()
 
+<<<<<<< HEAD
+
+print()
+
 
 print()
 
@@ -89,6 +93,18 @@ def user_ship_position():
         user_grid[row_position][column_position] = '#'
 
 
+"""
+Function to generate the computer ships using the same logic as the user ships
+but without showing the ships on the grid
+"""
+def computer_ships_position():
+    for i in range(5):
+        while True:
+            row_position = random.randint(0, 5 -1)
+            column_position = random.randint(0, 5 -1)
+            if [row_position, column_position] not in computer_ships:
+                break
+        computer_ships.append([row_position, column_position])
 
 
 
