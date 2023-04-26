@@ -42,24 +42,24 @@ time.sleep(2)
 
 clear_screen()
 
-rows = int(input(typing_print('How many rows would you like on the grid? ', 0.02)))
+# rows = int(input(typing_print('How many rows would you like on the grid? ', 0.02)))
 
-columns = int(input(typing_print('How many columns would you like on the grid? ', 0.02)))
+# columns = int(input(typing_print('How many columns would you like on the grid? ', 0.02)))
 print()
-
-
-"""
-Creates a grid to play the game
-"""
+grid_size = 8
 user_grid = []
 computer_grid = []
 user_ships = []
 computer_ships = []
 
-for i in range(rows):
+"""
+Creates a grid to play the game
+"""
+
+for i in range(grid_size):
     user_row = []
     computer_row = []
-    for j in range(columns):
+    for j in range(grid_size):
         user_row.append('-')
         computer_row.append('-')
     user_grid.append(user_row)
@@ -71,7 +71,7 @@ Function to print the grid
 
 def print_grid():
     print(f"     {USER}'s Grid                                   Enemy's Grid")
-    for i in range(rows):
+    for i in range(grid_size):
         print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
 
 print_grid()
@@ -90,6 +90,18 @@ def user_ship_position():
         user_grid[row_position][column_position] = '#'
 
 
+"""
+Function to generate the computer ships using the same logic as the user ships
+but without showing the ships on the grid
+"""
+def computer_ships_position():
+    for i in range(5):
+        while True:
+            row_position = random.randint(0, 5 -1)
+            column_position = random.randint(0, 5 -1)
+            if [row_position, column_position] not in computer_ships:
+                break
+        computer_ships.append([row_position, column_position])
 
 
 
