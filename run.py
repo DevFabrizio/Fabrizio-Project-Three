@@ -42,7 +42,6 @@ time.sleep(2)
 
 clear_screen()
 
-<<<<<<< HEAD
 
 print()
 
@@ -54,6 +53,7 @@ user_grid = []
 computer_grid = []
 user_ships = []
 computer_ships = []
+computer_shots = []
 
 """
 Creates a grid to play the game
@@ -105,6 +105,19 @@ def computer_ships_position():
             if [row_position, column_position] not in computer_ships:
                 break
         computer_ships.append([row_position, column_position])
+
+
+
+
+
+def computer_shot():
+    while True:
+        row_guess = random.randint(0, grid_size - 1)
+        column_guess = random.randint(0, grid_size - 1)
+        if [row_guess, column_guess] not in computer_shots:
+            break
+        computer_shots.append([row_guess, column_guess])
+        return [row_guess, column_guess]
 
 
 
