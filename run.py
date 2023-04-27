@@ -107,7 +107,10 @@ def computer_ships_position():
         computer_ships.append([row_position, column_position])
 
 
-
+"""
+Function to generate computer shots attempt with a random number for row 
+and column
+"""
 
 
 def computer_shot():
