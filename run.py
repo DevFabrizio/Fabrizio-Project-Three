@@ -136,7 +136,7 @@ def check_computer_shot(guess):
         user_grid[row_guess][column_guess] = 'X'
     else:
         typing_print('Ahahah the enemy ship missed its shot!', 0.02)
-        user_grid[row_guess, column_guess] = 'M'
+        user_grid[row_guess][column_guess] = 'M'
 
 
 
