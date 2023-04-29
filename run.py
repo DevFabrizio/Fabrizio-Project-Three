@@ -82,7 +82,7 @@ print_grid()
 """
 Function to position the user ships on the grid
 """
-def user_ship_position():
+def user_ships_position():
     for i in range(5):
         while True:
             row_position = random.randint(0, 5 -1)
@@ -174,6 +174,7 @@ def user_shot():
 
 
 
+def run_game():
 
 
 
