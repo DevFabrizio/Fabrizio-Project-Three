@@ -140,6 +140,18 @@ def check_computer_shot(guess):
 
 
 
+def user_shot():
+    while True:
+        try:
+            row_guess = int(input('Insert your row coordinates (Number from 1 to 8): '))
+            if row_guess < 1 or row_guess > 5:
+                typing_print('Your input MUST be a number between 1 and 8!', 0.02)
+            else:
+                break
+        except ValueError:
+            typing_print('Enter a number between 1 and 8', 0.02)
+
+
 
 
 
