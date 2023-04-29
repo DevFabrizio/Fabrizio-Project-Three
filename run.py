@@ -77,7 +77,6 @@ def print_grid():
     for i in range(grid_size):
         print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
 
-print_grid()
 
 """
 Function to position the user ships on the grid
@@ -159,15 +158,15 @@ def user_shot():
         except ValueError:
             typing_print('Enter a number between 1 and 8', 0.02)
         while True:
-        try:
-            column = input('Insert your column coordinates (Letter from A to H): ')
-            if column not in 'ABCDEFGH':
-                typing_print('Wrong coordinate. Enter a capital letter between A to H', 0.02)
-            else:
-                column_guess = column_nums[column]
-                break
-        except:
-            typing_print('Your column coordinate must be a capital letter from A to H', 0.02)
+            try:
+                column = input('Insert your column coordinates (Letter from A to H): ')
+                if column not in 'ABCDEFGH':
+                    typing_print('Wrong coordinate. Enter a capital letter between A to H', 0.02)
+                else:
+                    column_guess = column_nums[column]
+                    break
+            except:
+                ('Your column coordinate must be a capital letter from A to H', 0.02)
     return [row_guess - 1, column_guess]
 
 
@@ -175,6 +174,11 @@ def user_shot():
 
 
 def run_game():
+    user_ships_position()
+    computer_ships_position()
+    print_grid()
+
+run_game()
 
 
 
