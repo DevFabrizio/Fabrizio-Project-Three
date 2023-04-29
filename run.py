@@ -142,7 +142,7 @@ def check_computer_shot(guess):
 Global variable to transform the column letter in integers
 """
 
-column_num = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8}
+column_nums = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8}
 
 """
 Function to collect user input for row and column coordinates
@@ -158,7 +158,18 @@ def user_shot():
                 break
         except ValueError:
             typing_print('Enter a number between 1 and 8', 0.02)
-    
+        while True:
+        try:
+            column = input('Insert your column coordinates (Letter from A to H): ')
+            if column not in 'ABCDEFGH':
+                typing_print('Wrong coordinate. Enter a capital letter between A to H', 0.02)
+            else:
+                column_guess = column_nums[column]
+                break
+        except:
+            typing_print('Your column coordinate must be a capital letter from A to H', 0.02)
+    return [row_guess - 1, column_guess]
+
 
 
 
