@@ -2,7 +2,9 @@
 #### [Link to Deployed Project]()
 ## UX
 ### Strategy Plane
+As the main objective for this plane I wanted to create a software that allowed the user to input information in the terminal when requested. This input would also be validated to ensure a correct functioning of the software itself. Based on this information provided the software would generate a result and create or update new inputs for the user until a final condition was met.
 ### Scope Plane
+
 ### Structure Plane
 ### Skeleton Plane
 ### Surface Plane
