@@ -4,7 +4,7 @@
 ### Strategy Plane
 As the main objective for this plane I wanted to create a software that allowed the user to input information in the terminal when requested. This input would also be validated to ensure a correct functioning of the software itself. Based on this information provided the software would generate a result and create or update new inputs for the user until a final condition was met.
 ### Scope Plane
-
+In order to follow the blueprint layed out in the strategy plane I have decided that the best way to implement them was a game. For the occasion the scope plane was defined as the type of game to run which is a "player vs cpu" type. 
 ### Structure Plane
 ### Skeleton Plane
 ### Surface Plane
