@@ -6,6 +6,7 @@ As the main objective for this plane I wanted to create a software that allowed 
 ### Scope Plane
 In order to follow the blueprint layed out in the strategy plane I have decided that the best way to implement them was a game. For the occasion the scope plane was defined as the type of game to run which is a "player vs cpu" type. 
 ### Structure Plane
+Given the almost complete absence of a graphic output or normal interface for the user the structure is defined as the logic structure of the software. For this case the code is structured in an initial part that defines the initial condition of the software. Follows a series of functions that can manipulate the flow of the software based on certain conditions and in the end a general function to play the game in the correct sequence is applied.
 ### Skeleton Plane
 ### Surface Plane
 ## Project Goals
