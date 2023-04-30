@@ -8,6 +8,7 @@ In order to follow the blueprint layed out in the strategy plane I have decided 
 ### Structure Plane
 Given the almost complete absence of a graphic output or normal interface for the user the structure is defined as the logic structure of the software. For this case the code is structured in an initial part that defines the initial condition of the software. Follows a series of functions that can manipulate the flow of the software based on certain conditions and in the end a general function to play the game in the correct sequence is applied.
 ### Skeleton Plane
+This particular section could be dedicated by what shape the game takes when displayed onto the terminal. Since the terminal (and also the website deployment application) presents a series of constraints to the possibilities of the graphics the game will show itself in a mainly vertical fashion. Particularly the game will be read and played through user input and an output that will be always be readable by scrolling up or down.
 ### Surface Plane
 ## Project Goals
 The main goals for this project is to create an entertaing game using the python programming language. Being this my first attempt at a project like this I have decided to implement simple features that would allow the user to experience a fluid gaming session. In addition to that the general aim was to provide game that would utilize user input to carry on the program until either the computer or the user reached a satisfactory condition (win or lose system).
