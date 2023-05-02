@@ -21,6 +21,11 @@ Given the almost legendary history of this game, the target audience is broadly 
 ### Future Features
 ## Testing and Technologies
 ### Tech Used
+The technologies and softwares used for this project are the following:
+* CodeAnywhere as the IDE and code editor
+* Heroku as the deployment platform
+* Python Tutor as a tool to test partial code and review the flow of the program 
+* GitHub as the repository holder
 ### Bugs
 ### Validation
 ## Deployment and Updates
