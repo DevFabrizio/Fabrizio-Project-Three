@@ -97,10 +97,10 @@ Function to generate the computer ships using the same logic as the user ships
 but without showing the ships on the grid
 """
 def computer_ships_position():
-    for i in range(5):
+    for i in range(8):
         while True:
-            row_position = random.randint(0, 5 -1)
-            column_position = random.randint(0, 5 -1)
+            row_position = random.randint(0, 8 -1)
+            column_position = random.randint(0, 8 -1)
             if [row_position, column_position] not in computer_ships:
                 break
         computer_ships.append([row_position, column_position])
