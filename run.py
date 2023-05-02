@@ -82,10 +82,10 @@ def print_grid():
 Function to position the user ships on the grid
 """
 def user_ships_position():
-    for i in range(5):
+    for i in range(8):
         while True:
-            row_position = random.randint(0, 5 -1)
-            column_position = random.randint(0, 5 -1)
+            row_position = random.randint(0, 8 -1)
+            column_position = random.randint(0, 8 -1)
             if [row_position, column_position] not in user_ships:
                 break
         user_ships.append([row_position, column_position])
