@@ -57,8 +57,6 @@ clear_screen()
 print()
 
 
-print()
-
 """
 Creates a grid to play the game
 """
@@ -72,21 +70,21 @@ for i in range(grid_size):
     user_grid.append(user_row)
     computer_grid.append(computer_row)
 
-"""
-Function to print the grid
-"""
-
 def print_grid():
+
+    """
+    Function to print the grid
+    """
     print(f"     {USER}'s Grid                                  Enemy's Grid")
     for i in range(grid_size):
         print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' 
         + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
 
-
-"""
-Function to position the user ships on the grid
-"""
 def user_ships_position():
+
+    """
+    Function to position the user ships on the grid
+    """
     for i in range(8):
         while True:
             row_position = random.randint(0, 8 -1)
@@ -97,11 +95,11 @@ def user_ships_position():
         user_grid[row_position][column_position] = '#'
 
 
-"""
-Function to generate the computer ships using the same logic as the user ships
-but without showing the ships on the grid
-"""
 def computer_ships_position():
+    """
+    Function to generate the computer ships using the same logic as the user ships
+    but without showing the ships on the grid
+    """
     for i in range(8):
         while True:
             row_position = random.randint(0, 8 -1)
@@ -111,13 +109,13 @@ def computer_ships_position():
         computer_ships.append([row_position, column_position])
 
 
-"""
-Function to generate computer shots attempt with a random number for row 
-and column
-"""
 
 
 def computer_shot():
+    """
+    Function to generate computer shots attempt with a random number for row 
+    and column
+    """
     while True:
         row_guess = random.randint(0, grid_size - 1)
         column_guess = random.randint(0, grid_size - 1)
@@ -127,12 +125,12 @@ def computer_shot():
         return [row_guess, column_guess]
 
 
-"""
-Function to check if the computer shot it or missed a user ship
-"""
 
 
 def check_computer_shot(guess):
+    """
+    Function to check if the computer shot it or missed a user ship
+    """
     row_guess, column_guess = guess
     if [row_guess, column_guess] in user_ships:
         slow_print_effect('The enemy just sunk one of your ships!!!', 0.02)
@@ -144,11 +142,11 @@ def check_computer_shot(guess):
 
 
 
-"""
-Function to collect user input for row and column coordinates
-"""
-
 def user_shot():
+
+    """
+    Function to collect user input for row and column coordinates
+    """
     while True:
         try:
             row_guess = int(input('Insert your row coordinates (Number from 1 to 8): '))
