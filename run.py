@@ -5,7 +5,7 @@ import os
 import random
 
 
-def typing_print(text, t):
+def slow_print_effect(text, t):
 
     """
     Function to substitute the print function to create slow typing effect
@@ -30,10 +30,10 @@ typing_print(data.RULES, 0.02)
 USER = ''
 
 while True:
-    USER = input(typing_print('Enter your battle name: ', 0.02))
+    USER = input(slow_print_effect('Enter your battle name: ', 0.02))
 
     if USER.isalpha():
-        typing_print(f"Welcome {USER}, get ready for battle!", 0.02)
+        slow_print_effect(f"Welcome {USER}, get ready for battle!", 0.02)
         break
     else:
         typing_print('You must enter a valid name!\n', 0.02)
