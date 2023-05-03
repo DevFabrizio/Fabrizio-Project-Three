@@ -5,6 +5,16 @@ import os
 import random
 
 
+# list of global variables used
+
+grid_size = 8
+user_grid = []
+computer_grid = []
+user_ships = []
+computer_ships = []
+computer_shots = []
+column_nums = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8}
+
 def slow_print_effect(text, t):
 
     """
@@ -47,13 +57,6 @@ print()
 
 
 print()
-
-grid_size = 8
-user_grid = []
-computer_grid = []
-user_ships = []
-computer_ships = []
-computer_shots = []
 
 """
 Creates a grid to play the game
@@ -138,11 +141,7 @@ def check_computer_shot(guess):
         slow_print_effect('Ahahah the enemy ship missed its shot!', 0.02)
         user_grid[row_guess][column_guess] = 'M'
 
-"""
-Global variable to transform the column letter in integers
-"""
 
-column_nums = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8}
 
 """
 Function to collect user input for row and column coordinates
