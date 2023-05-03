@@ -14,6 +14,8 @@ user_ships = []
 computer_ships = []
 computer_shots = []
 column_nums = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8}
+USER = ''
+
 
 def slow_print_effect(text, t):
 
@@ -37,7 +39,6 @@ def clear_screen():
 
 slow_print_effect(data.RULES, 0.02)
 
-USER = ''
 
 while True:
     USER = input(slow_print_effect('Enter your battle name: ', 0.02))
