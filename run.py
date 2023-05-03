@@ -73,9 +73,10 @@ Function to print the grid
 """
 
 def print_grid():
-    print(f"     {USER}'s Grid                                   Enemy's Grid")
+    print(f"     {USER}'s Grid                                  Enemy's Grid")
     for i in range(grid_size):
-        print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
+        print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' 
+        + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
 
 
 """
