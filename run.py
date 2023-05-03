@@ -25,7 +25,7 @@ def clear_screen():
     os.system('clear')
 
 
-typing_print(data.RULES, 0.02)
+slow_print_effect(data.RULES, 0.02)
 
 USER = ''
 
@@ -36,7 +36,7 @@ while True:
         slow_print_effect(f"Welcome {USER}, get ready for battle!", 0.02)
         break
     else:
-        typing_print('You must enter a valid name!\n', 0.02)
+        slow_print_effect('You must enter a valid name!\n', 0.02)
 
 time.sleep(2)
 
@@ -130,11 +130,11 @@ Function to check if the computer shot it or missed a user ship
 def check_computer_shot(guess):
     row_guess, column_guess = guess
     if [row_guess, column_guess] in user_ships:
-        typing_print('The enemy just sunk one of your ships!!!', 0.02)
+        slow_print_effect('The enemy just sunk one of your ships!!!', 0.02)
         user_ships.remove([row_guess, column_guess])
         user_grid[row_guess][column_guess] = 'X'
     else:
-        typing_print('Ahahah the enemy ship missed its shot!', 0.02)
+        slow_print_effect('Ahahah the enemy ship missed its shot!', 0.02)
         user_grid[row_guess][column_guess] = 'M'
 
 """
@@ -152,16 +152,16 @@ def user_shot():
         try:
             row_guess = int(input('Insert your row coordinates (Number from 1 to 8): '))
             if row_guess < 1 or row_guess > 5:
-                typing_print('Your input MUST be a number between 1 and 8!', 0.02)
+                slow_print_effect('Your input MUST be a number between 1 and 8!', 0.02)
             else:
                 break
         except ValueError:
-            typing_print('Enter a number between 1 and 8', 0.02)
+            slow_print_effect('Enter a number between 1 and 8', 0.02)
         while True:
             try:
                 column = input('Insert your column coordinates (Letter from A to H): ')
                 if column not in 'ABCDEFGH':
-                    typing_print('Wrong coordinate. Enter a capital letter between A to H', 0.02)
+                    slow_print_effect('Wrong coordinate. Enter a capital letter between A to H', 0.02)
                 else:
                     column_guess = column_nums[column]
                     break
