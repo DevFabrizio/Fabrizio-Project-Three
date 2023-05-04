@@ -60,18 +60,19 @@ clear_screen()
 print()
 
 
-"""
-Creates a grid to play the game
-"""
 
-for i in range(grid_size):
-    user_row = []
-    computer_row = []
-    for j in range(grid_size):
-        user_row.append('-')
-        computer_row.append('-')
-    user_grid.append(user_row)
-    computer_grid.append(computer_row)
+def create_grid():
+    """
+    Creates a grid to play the game
+    """
+    for i in range(grid_size):
+        user_row = []
+        computer_row = []
+        for j in range(grid_size):
+            user_row.append('-')
+            computer_row.append('-')
+        user_grid.append(user_row)
+        computer_grid.append(computer_row)
 
 def print_grid():
 
@@ -177,6 +178,7 @@ def user_shot():
 
 
 def run_game():
+    create_grid()
     user_ships_position()
     computer_ships_position()
     print_grid()
