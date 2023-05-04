@@ -119,6 +119,7 @@ def computer_shot():
     """
     Function to generate computer shots attempt with a random number for row 
     and column
+    return: a list of random integers from 0 to 7
     """
     while True:
         row_guess = random.randint(0, grid_size - 1)
