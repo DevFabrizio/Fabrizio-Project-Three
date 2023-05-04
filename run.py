@@ -39,12 +39,13 @@ def clear_screen():
     """
     os.system('clear')
 
-def get_user_battlename()
+def get_user_battlename():
     while True:
         USER = input(slow_print_effect('Enter your battle name: ', 0.02))
 
         if USER.isalpha():
             slow_print_effect(f"Welcome {USER}, get ready for battle!", 0.02)
+            print()
             break
         else:
             slow_print_effect('You must enter a valid name!\n', 0.02)
@@ -178,6 +179,7 @@ def get_user_shot():
 
 def run_game():
     slow_print_effect(data.RULES, 0.02)
+    get_user_battlename()
     create_grid()
     user_ships_position()
     computer_ships_position()
