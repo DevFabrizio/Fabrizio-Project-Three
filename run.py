@@ -40,9 +40,6 @@ def clear_screen():
     os.system('clear')
 
 
-slow_print_effect(data.RULES, 0.02)
-
-
 while True:
     USER = input(slow_print_effect('Enter your battle name: ', 0.02))
 
@@ -180,6 +177,7 @@ def get_user_shot():
 
 
 def run_game():
+    slow_print_effect(data.RULES, 0.02)
     create_grid()
     user_ships_position()
     computer_ships_position()
