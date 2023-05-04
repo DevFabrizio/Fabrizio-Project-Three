@@ -130,12 +130,15 @@ def computer_shot():
 def check_computer_shot(guess):
     """
     Function to check if the computer shot it or missed a user ship
+    Args: guess is set to define the row and column guess
+    return: True if the guess hit a ship, False if the shot missed
     """
     row_guess, column_guess = guess
     if [row_guess, column_guess] in user_ships:
         slow_print_effect('The enemy just sunk one of your ships!!!', 0.02)
         user_ships.remove([row_guess, column_guess])
         user_grid[row_guess][column_guess] = 'X'
+        return True
     else:
         slow_print_effect('Ahahah the enemy ship missed its shot!', 0.02)
         user_grid[row_guess][column_guess] = 'M'
