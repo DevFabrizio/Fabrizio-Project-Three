@@ -45,7 +45,7 @@ def get_user_battlename():
 
         if USER.isalpha():
             slow_print_effect(f"Welcome {USER}, get ready for battle!", 0.02)
-            print()
+            print('\n\n\n')
             break
         else:
             slow_print_effect('You must enter a valid name!\n', 0.02)
@@ -78,6 +78,7 @@ def print_grid():
     Function to print the grid
     """
     print(f"     {USER}'s Grid                                  Enemy's Grid")
+    print('\n\n')
     for i in range(grid_size):
         print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' 
         + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
@@ -188,4 +189,4 @@ def run_game():
 run_game()
 
 
-
+# controlla che venga visualizzato il nome del giocatore sulla sua rispettiva griglia
