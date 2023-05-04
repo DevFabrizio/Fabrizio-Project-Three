@@ -39,15 +39,15 @@ def clear_screen():
     """
     os.system('clear')
 
+def get_user_battlename()
+    while True:
+        USER = input(slow_print_effect('Enter your battle name: ', 0.02))
 
-while True:
-    USER = input(slow_print_effect('Enter your battle name: ', 0.02))
-
-    if USER.isalpha():
-        slow_print_effect(f"Welcome {USER}, get ready for battle!", 0.02)
-        break
-    else:
-        slow_print_effect('You must enter a valid name!\n', 0.02)
+        if USER.isalpha():
+            slow_print_effect(f"Welcome {USER}, get ready for battle!", 0.02)
+            break
+        else:
+            slow_print_effect('You must enter a valid name!\n', 0.02)
 
 time.sleep(2)
 
