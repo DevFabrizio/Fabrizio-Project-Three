@@ -21,6 +21,9 @@ def slow_print_effect(text, t):
 
     """
     Function to substitute the print function to create slow typing effect
+    Args: text is for the string that the function prints and "t" is for the
+    amount of time we want to delay the printing of the next character
+    on the terminal
     """
 
     for character in text:
