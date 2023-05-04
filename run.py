@@ -155,7 +155,7 @@ def get_user_shot():
     """
     while True:
         try:
-            row_guess = int(input('Insert your row coordinates (Number from 1 to 8): '))
+            row_guess = int(input('Insert your row coordinates (From 1 to 8): '))
             if row_guess < 1 or row_guess > 5:
                 slow_print_effect('Your input MUST be a number between 1 and 8!', 0.02)
             else:
@@ -164,9 +164,10 @@ def get_user_shot():
             slow_print_effect('Enter a number between 1 and 8', 0.02)
         while True:
             try:
-                column = input('Insert your column coordinates (Letter from A to H): ')
+                column = input('Insert your column coordinates (From A to H): ')
                 if column not in 'ABCDEFGH':
-                    slow_print_effect('Wrong coordinate. Enter a capital letter between A to H', 0.02)
+                    slow_print_effect('Wrong coordinate', 0.02) 
+                    slow_print_effect('Enter a capital letter between A to H', 0.02)
                 else:
                     column_guess = column_nums[column]
                     break
