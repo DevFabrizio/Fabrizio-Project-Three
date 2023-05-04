@@ -115,7 +115,7 @@ def computer_ships_position():
 
 
 
-def computer_shot():
+def generate_computer_shot():
     """
     Function to generate computer shots attempt with a random number for row 
     and column
@@ -148,7 +148,7 @@ def check_computer_shot(guess):
 
 
 
-def user_shot():
+def get_user_shot():
 
     """
     Function to collect user input for row and column coordinates
