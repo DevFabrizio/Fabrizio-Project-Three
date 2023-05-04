@@ -1,6 +1,7 @@
 # Fabrizio Milestone Project 3
 #### [Link to Deployed Project]()
 ## Introduction
+This the third project for the Code Institute Full Stack curriculum. Due to the fact that the only programming language used is Python, the project will mostly lack a modern user interface and will have little to no styling. These are the reasons why I have decided not to describe the project using the design principles used for all the previous websites I created. As a general overview this project is my first attempt at a terminal based game. I have decided to code a battleship game as suggested in the project ideas from Code Institute. This README file will contain description of the features and other details about my approach and specific content of the software.
 ## Project Goals
 The main goals for this project is to create an entertaing game using the python programming language. Being this my first attempt at a project like this I have decided to implement simple features that would allow the user to experience a fluid gaming session. In addition to that the general aim was to provide game that would utilize user input to carry on the program until either the computer or the user reached a satisfactory condition (win or lose system).
 ### Target 
