@@ -179,7 +179,7 @@ def get_user_shot():
                 else:
                     column_guess = column_nums[column]
                     break
-            except:
+            except ValueError:
                 ('Your column coordinate must be a capital letter from A to H', 0.02)
     return [row_guess - 1, column_guess]
 
