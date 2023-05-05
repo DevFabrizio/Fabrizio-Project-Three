@@ -163,7 +163,7 @@ def get_user_shot():
     while True:
         try:
             row_guess = int(input('Insert your row coordinates (From 1 to 8): '))
-            if row_guess < 1 or row_guess > 5:
+            if row_guess < 1 or row_guess > 8:
                 slow_print_effect('Your input MUST be a number between 1 and 8!\n', 0.02)
             else:
                 break
