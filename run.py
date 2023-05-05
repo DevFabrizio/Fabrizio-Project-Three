@@ -147,11 +147,11 @@ def check_computer_shot(guess):
     # row_guess = guess
     # column_guess = guess
     if [row_guess, column_guess] in user_ships:
-        slow_print_effect('The enemy just sunk one of your ships!!!', 0.02)
+        slow_print_effect('The enemy just sunk one of your ships!!!\n', 0.02)
         user_ships.remove([row_guess, column_guess])
         user_grid[row_guess][column_guess] = 'X'
     else:
-        slow_print_effect('Ahahah the enemy ship missed its shot!', 0.02)
+        slow_print_effect('Ahahah the enemy ship missed its shot!\n', 0.02)
         user_grid[row_guess][column_guess] = 'M'
 
 
@@ -164,22 +164,22 @@ def get_user_shot():
         try:
             row_guess = int(input('Insert your row coordinates (From 1 to 8): '))
             if row_guess < 1 or row_guess > 5:
-                slow_print_effect('Your input MUST be a number between 1 and 8!', 0.02)
+                slow_print_effect('Your input MUST be a number between 1 and 8!\n', 0.02)
             else:
                 break
         except ValueError:
-            slow_print_effect('Enter a number between 1 and 8', 0.02)
+            slow_print_effect('Enter a number between 1 and 8\n', 0.02)
     while True:
         try:
             column = input('Insert your column coordinates (From A to H): ')
             if column not in 'ABCDEFGH':
                 slow_print_effect('Wrong coordinate', 0.02) 
-                slow_print_effect('Enter a capital letter between A to H', 0.02)
+                slow_print_effect('Enter a capital letter between A to H\n', 0.02)
             else:
                 column_guess = column_nums[column]
                 break
         except KeyError:
-            ('Your column coordinate must be a capital letter from A to H', 0.02)
+            ('Your column coordinate must be a capital letter from A to H\n', 0.02)
     return [row_guess - 1, column_guess]
 
 
@@ -191,12 +191,12 @@ def check_user_shot(guess):
     """
     row_guess, column_guess = guess
     if [row_guess, column_guess] in computer_ships:
-        print("That's a hit! Well done!")
+        print("That's a hit! Well done!\n")
         computer_ships.remove([row_guess, column_guess])
         computer_grid[row_guess][column_guess] = 'H'    
         return True
     else:
-        print('You missed!')
+        print('You missed!\n')
         computer_grid[row_guess][column_guess] = 'M'
 
 
