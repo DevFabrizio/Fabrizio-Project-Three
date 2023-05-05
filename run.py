@@ -13,7 +13,7 @@ computer_grid = []
 user_ships = []
 computer_ships = []
 computer_shots = []
-column_nums = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8}
+column_nums = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7}
 
 
 
