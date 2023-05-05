@@ -218,14 +218,14 @@ def run_game():
         if check_user_shot(guess):
             if not computer_ships:
                 slow_print_effect(f"It took you {guess_attempt} shots to sink all the"  
-                                  f"enemy's ships! You've won the battle", 0.02)
+                                  f" enemy's ships!\n You've won the battle", 0.02)
                 break
         cpu_guess_position = generate_computer_shot()
         check_computer_shot(cpu_guess_position)
 
         if not user_ships:
             slow_print_effect(f"The enemy sunk your ships in {guess_attempt} turns"
-                              f"You have lost this battle!", 0.02)
+                              f" You have lost this battle!", 0.02)
             break
         print_grid()
 run_game()
