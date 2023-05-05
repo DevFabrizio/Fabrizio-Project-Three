@@ -14,7 +14,7 @@ user_ships = []
 computer_ships = []
 computer_shots = []
 column_nums = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8}
-USER = ''
+
 
 
 def slow_print_effect(text, t):
@@ -40,6 +40,8 @@ def clear_screen():
     os.system('clear')
 
 def get_user_battlename():
+
+    global USER
     while True:
         USER = input(slow_print_effect('Enter your battle name: ', 0.02))
 
@@ -50,7 +52,9 @@ def get_user_battlename():
         else:
             slow_print_effect('You must enter a valid name!\n', 0.02)
 
+
 time.sleep(2)
+
 
 clear_screen()
 
@@ -77,6 +81,7 @@ def print_grid():
     """
     Function to print the grid
     """
+    
     print(f"     {USER}'s Grid                                  Enemy's Grid")
     print('\n\n')
     for i in range(grid_size):
