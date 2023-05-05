@@ -41,6 +41,10 @@ def clear_screen():
 
 def get_user_battlename():
 
+    """
+    Function to get and validate user battle name
+    """
+
     global USER
     while True:
         USER = input(slow_print_effect('Enter your battle name: ', 0.02))
