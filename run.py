@@ -39,6 +39,7 @@ def clear_screen():
     """
     os.system('clear')
 
+
 def get_user_battlename():
 
     """
@@ -64,7 +65,6 @@ clear_screen()
 
 
 print()
-
 
 
 def create_grid():
@@ -134,8 +134,8 @@ def generate_computer_shot():
         column_guess = random.randint(0, grid_size - 1)
         if [row_guess, column_guess] not in computer_shots:
             break
-        computer_shots.append([row_guess, column_guess])
-        return [row_guess, column_guess]
+    computer_shots.append([row_guess, column_guess])
+    return [row_guess, column_guess]
 
 
 def check_computer_shot(guess):
@@ -144,6 +144,8 @@ def check_computer_shot(guess):
     Args: guess is set to define the row and column guess
     """
     row_guess, column_guess = guess
+    # row_guess = guess
+    # column_guess = guess
     if [row_guess, column_guess] in user_ships:
         slow_print_effect('The enemy just sunk one of your ships!!!', 0.02)
         user_ships.remove([row_guess, column_guess])
@@ -167,17 +169,17 @@ def get_user_shot():
                 break
         except ValueError:
             slow_print_effect('Enter a number between 1 and 8', 0.02)
-        while True:
-            try:
-                column = input('Insert your column coordinates (From A to H): ')
-                if column not in 'ABCDEFGH':
-                    slow_print_effect('Wrong coordinate', 0.02) 
-                    slow_print_effect('Enter a capital letter between A to H', 0.02)
-                else:
-                    column_guess = column_nums[column]
-                    break
-            except ValueError:
-                ('Your column coordinate must be a capital letter from A to H', 0.02)
+    while True:
+        try:
+            column = input('Insert your column coordinates (From A to H): ')
+            if column not in 'ABCDEFGH':
+                slow_print_effect('Wrong coordinate', 0.02) 
+                slow_print_effect('Enter a capital letter between A to H', 0.02)
+            else:
+                column_guess = column_nums[column]
+                break
+        except KeyError:
+            ('Your column coordinate must be a capital letter from A to H', 0.02)
     return [row_guess - 1, column_guess]
 
 
@@ -191,28 +193,40 @@ def check_user_shot(guess):
     if [row_guess, column_guess] in computer_ships:
         print("That's a hit! Well done!")
         computer_ships.remove([row_guess, column_guess])
-        computer_row[row_guess][column_guess] = 'H'    
+        computer_grid[row_guess][column_guess] = 'H'    
         return True
     else:
-        computer_grid[row_guess][column_guess] = 'M'
         print('You missed!')
+        computer_grid[row_guess][column_guess] = 'M'
 
 
 
 
 
 def run_game():
-    slow_print_effect(data.RULES, 0.02)
+    # slow_print_effect(data.RULES, 0.02)
     get_user_battlename()
     create_grid()
     user_ships_position()
     computer_ships_position()
+
     print_grid()
     guess_attempt = 0
     while True:
         guess = get_user_shot()
-        guess_attempt
+        guess_attempt += 1
+        if check_user_shot(guess):
+            if not computer_ships:
+                slow_print_effect(f"It took you {guess_attempt} shots to sink all the"  
+                                  f"enemy's ships! You've won the battle", 0.02)
+                break
+        cpu_guess_position = generate_computer_shot()
+        check_computer_shot(cpu_guess_position)
 
+        if not user_ships:
+            slow_print_effect(f"The enemy sunk your ships in {guess_attempt} turns"
+                              f"You have lost this battle!", 0.02)
+            break
+        print_grid()
 run_game()
-
 
