@@ -71,6 +71,8 @@ def create_grid():
     """
     Creates a grid to play the game
     """
+    global computer_row
+
     for i in range(grid_size):
         user_row = []
         computer_row = []
@@ -121,8 +123,6 @@ def computer_ships_position():
         computer_ships.append([row_position, column_position])
 
 
-
-
 def generate_computer_shot():
     """
     Function to generate computer shots attempt with a random number for row 
@@ -138,8 +138,6 @@ def generate_computer_shot():
         return [row_guess, column_guess]
 
 
-
-
 def check_computer_shot(guess):
     """
     Function to check if the computer shot it or missed a user ship
@@ -153,7 +151,6 @@ def check_computer_shot(guess):
     else:
         slow_print_effect('Ahahah the enemy ship missed its shot!', 0.02)
         user_grid[row_guess][column_guess] = 'M'
-
 
 
 def get_user_shot():
@@ -184,6 +181,23 @@ def get_user_shot():
     return [row_guess - 1, column_guess]
 
 
+def check_user_shot(guess):
+
+    """
+    Function to check the user guess
+    args: guess is set to define row and column guess
+    """
+    row_guess, column_guess = guess
+    if [row_guess, column_guess] in computer_ships:
+        print("That's a hit! Well done!")
+        computer_ships.remove([row_guess, column_guess])
+        computer_row[row_guess][column_guess] = 'H'    
+        return True
+    else:
+        computer_grid[row_guess][column_guess] = 'M'
+        print('You missed!')
+
+
 
 
 
@@ -194,8 +208,11 @@ def run_game():
     user_ships_position()
     computer_ships_position()
     print_grid()
+    guess_attempt = 0
+    while True:
+        guess = get_user_shot()
+        guess_attempt
 
 run_game()
 
 
-# controlla che venga visualizzato il nome del giocatore sulla sua rispettiva griglia
