@@ -27,8 +27,8 @@ The validatons are also necessary in order to allow the user to insert the corre
 | Validation         | Correct input            | Wrong input                                                                         | No input                          |   |
 |--------------------|--------------------------|-------------------------------------------------------------------------------------|-----------------------------------|---|
 | User battle name   | The game runs correctly  | The game gives suggestions on the correction to make.  Runs the input request again | The game waits for the user input |   |
-| Row coordinates    | The game runs correctly  |                                                                                     | The game waits for the user input |   |
-| Column coordinates | The game runs corrcectly |                                                                                     | The game waits for the user input |   |
+| Row coordinates    | The game runs correctly  | The game alerts the user of the wrong input. Runs the input request again  | The game waits for the user input |   |
+| Column coordinates | The game runs correctly |  The game alerts the user of the wrong input. Runs the input request again  | The game waits for the user input |   |
 ## Deployment and Updates
 ### Deployment Steps
 ## Development
