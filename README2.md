@@ -29,6 +29,7 @@ The possible future features that could be implemented in the game are:
 * Creating a graphic interface in order to display the game on a UI instead that on the terminal
 * Creating a function (or modifying an existing one) to limit the number of shots allowed
 * Increasing the difficulty of the game by setting a time limit for every shot attempt
+* Allowing the game to create ships of different sizes
 ## Testing and Technologies
 ### Tech Used
 The technologies and softwares used for this project are the following:
