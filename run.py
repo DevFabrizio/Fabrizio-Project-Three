@@ -226,6 +226,8 @@ def run_game():
             slow_print_effect(f"The enemy sunk your ships in {guess_attempt} turns"
                               f" You have lost this battle!", 0.02)
             break
+        time.sleep(2)
+        clear_screen()
         print_grid()
 run_game()
 
