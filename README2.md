@@ -21,6 +21,14 @@ The technologies and softwares used for this project are the following:
 ### Bugs
 During the creation of this program I have encountered many bugs. I was able to fix them (some faster than others) with some Google searches or mainly just by going through the code. The majority of the bugs were caused by a mistake in indentation and targeting the wrong element. A valid "lesson learned" from this project is surely the fact that is important to go through your code line by line to make sure everything is working correctly.
 ### Validation
+In order to validate the code a series of user input validation checks have been put into place to ensure a smooth run of the program.
+The validatons are also necessary in order to allow the user to insert the correct data type or input. The following is a table with the validations applied:
+
+| Validation         | Correct input            | Wrong input                                                                         | No input                          |   |
+|--------------------|--------------------------|-------------------------------------------------------------------------------------|-----------------------------------|---|
+| User battle name   | The game runs correctly  | The game gives suggestions on the correction to make.  Runs the input request again | The game waits for the user input |   |
+| Row coordinates    | The game runs correctly  |                                                                                     | The game waits for the user input |   |
+| Column coordinates | The game runs corrcectly |                                                                                     | The game waits for the user input |   |
 ## Deployment and Updates
 ### Deployment Steps
 ## Development
