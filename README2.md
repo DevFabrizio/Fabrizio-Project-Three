@@ -7,6 +7,18 @@ The main goals for this project is to create an entertaing game using the python
 ### Target 
 Given the almost legendary history of this game, the target audience is broadly represented by almost all ages. The game is relatively easily understood and the rules rarely create a barrier to the access of it. As a general rule of thumb I feel confident to say that this specific type of game can be played from anyone aged from 8 years old to 99+. For my version of the game the only impairment could be the language used.
 ## User Story
+In order to better understand the flow of the game I will list the User Story as in the steps that the user will take to play the game.
+As a User I want to:
+
+* Read the instructions when the game starts 
+* Input my battle name when presented with the user input on the terminal
+* Allow the game to generate a grid for me and for the cpu
+* Take mental note of the positions of my ships on the grid
+* Input a number to target a specific row to hit
+* Input a capital character to hit a specific column on the row I had previously chosen
+* Evaluate if I hit or missed the enemy's ships
+* Evaluate if the enemy hit or missed my ships
+* Repeat the row and column selection until game completion
 
 ## Interactions and Features
 Obviously the only interactions possible in a text based game that runs in a terminal are text input and some mouse clicking. When it comes to features though, I have decided to include some different solutions to make the game easy to understand for the user. Some of these features include validation of the user's input and a correct distribution of the text on the terminal.
