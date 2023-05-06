@@ -203,6 +203,12 @@ def check_user_shot(guess):
 
 
 def run_game():
+
+    """
+    Function to run the game. 
+    Within are called the functions to print the rules, get the user input for the name 
+    create the grid and print the grid to the terminal.
+    """
     # slow_print_effect(data.RULES, 0.02)
     get_user_battlename()
     time.sleep(1)
@@ -232,5 +238,4 @@ def run_game():
         print_grid()
 run_game()
 
-# aggiungi clear_screen() alla fine della run, testa il gioco di nuovo, aggiungi il 'ABCDEFGH' 
-# sulla griglia, controlla le validazioni e aggiungi un pò di spazi tra le print le serve
+# controlla le validazioni e aggiungi un pò di spazi tra le print le serve
