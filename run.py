@@ -144,8 +144,6 @@ def check_computer_shot(guess):
     Args: guess is set to define the row and column guess
     """
     row_guess, column_guess = guess
-    # row_guess = guess
-    # column_guess = guess
     if [row_guess, column_guess] in user_ships:
         slow_print_effect('The enemy just sunk one of your ships!!!\n', 0.02)
         user_ships.remove([row_guess, column_guess])
@@ -206,6 +204,7 @@ def check_user_shot(guess):
 def run_game():
     # slow_print_effect(data.RULES, 0.02)
     get_user_battlename()
+    time.sleep(1)
     create_grid()
     user_ships_position()
     computer_ships_position()
@@ -230,3 +229,5 @@ def run_game():
         print_grid()
 run_game()
 
+# aggiungi clear_screen() alla fine della run, testa il gioco di nuovo, aggiungi il 'ABCDEFGH' 
+# sulla griglia, controlla le validazioni e aggiungi un pò di spazi tra le print le serve
