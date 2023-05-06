@@ -36,3 +36,7 @@ The validatons are also necessary in order to allow the user to insert the corre
 ### Software Maintenance and Updates
 A correct indentation has been used in the code to allow future developers to maintain and update the code. In addition to that I have also used a series of functions to run specific parts of the game. These functions are then sequentially called in a general function that runs the main logic for the game. This structure makes it easier to modify the different functions to provide other functionality. It is also possible to modify the main logic of the game in the "run_game" function to twitch the flow of the game. 
 ## Credits
+For this game I have used the following websites for development and testing:
+* [Tables Generator](https://tablesgenerator.com/) for the markdown table.
+* [Python Tutor](https://pythontutor.com/) for the debugging
+
