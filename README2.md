@@ -8,6 +8,7 @@ The main goals for this project is to create an entertaing game using the python
 Given the almost legendary history of this game, the target audience is broadly represented by almost all ages. The game is relatively easily understood and the rules rarely create a barrier to the access of it. As a general rule of thumb I feel confident to say that this specific type of game can be played from anyone aged from 8 years old to 99+. For my version of the game the only impairment could be the language used.
 ## User Story
 ## Interactions and Features
+Obviously the only interactions possible in a text based game that runs in a terminal are text input and some mouse clicking. When it comes to features though, I have decided to include some different solutions to make the game easy to understand for the user. Some of these features include validation of the user's input and a correct distribution of the text on the terminal.
 ### Features Used
 ### Future Features
 ## Testing and Technologies
