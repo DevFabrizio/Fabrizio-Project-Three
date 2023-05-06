@@ -19,6 +19,7 @@ The technologies and softwares used for this project are the following:
 * Python Tutor as a tool to test partial code and review the flow of the program 
 * GitHub as the repository holder
 ### Bugs
+During the creation of this program I have encountered many bugs. I was able to fix them (some faster than others) with some Google searches or mainly just by going through the code. The majority of the bugs were caused by a mistake in indentation and targeting the wrong element. A valid "lesson learned" from this project is surely the fact that is important to go through your code line by line to make sure everything is working correctly.
 ### Validation
 ## Deployment and Updates
 ### Deployment Steps
