@@ -172,7 +172,7 @@ def get_user_shot():
         try:
             column = input('Insert your column coordinates (From A to H): ')
             if column not in 'ABCDEFGH':
-                slow_print_effect('Wrong coordinate', 0.02) 
+                slow_print_effect('Wrong coordinate\n', 0.02) 
                 slow_print_effect('Enter a capital letter between A to H\n', 0.02)
             else:
                 column_guess = column_nums[column]
@@ -197,9 +197,6 @@ def check_user_shot(guess):
     else:
         print('You missed!\n')
         computer_grid[row_guess][column_guess] = 'M'
-
-
-
 
 
 def run_game():
@@ -236,6 +233,8 @@ def run_game():
         time.sleep(2)
         clear_screen()
         print_grid()
+
+
 run_game()
 
 # controlla le validazioni e aggiungi un pò di spazi tra le print le serve
