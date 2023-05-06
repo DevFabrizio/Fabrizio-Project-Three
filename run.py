@@ -89,7 +89,8 @@ def print_grid():
     """
     
     print(f"     {USER}'s Grid                                  Enemy's Grid")
-    print('\n\n')
+    print('\n')
+    slow_print_effect('  A   B   C   D   E   F   G   H        A   B   C   D   E   F   G   H\n', 0.01)
     for i in range(grid_size):
         print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' 
         + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
