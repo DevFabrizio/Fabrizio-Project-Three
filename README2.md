@@ -45,6 +45,18 @@ This is the first feature shown when the user starts the game. This welcome mess
 
 In this second feature it's possible to see how the validation works for the user battle name input works. I have implemented the logic to only allow alphabetic characters so an empty input or any other combination will not work and the input will be prompted again. 
 
+![](docs/images/get-ready-message.png)
+
+Once the user has provided a battle name the above message is displayed. I have included this feature to let the user know that the game, once input the chosen name, will be about to start.
+
+![](docs/images/battleship-grids.png)
+
+Finally the grids are printed to the terminal. I decided to placed them side by side because I had enough space in the terminal to do so and also because printing them one after the other in a vertical fashion would have been less practical and wouldn't have let the user gain situational awereness of the flow of the game.
+
+![](docs/images/row-coordinates-validation.png)
+
+This feature is about the input for the coordinates that the user wants to target. Only the row validation is shown in the image but the logic and presentation is the same for the column input as well. The only difference is that for the rows I have used a "numeric only" data type and for the columns a "capital alphabetic only". In both cases the game will not proceed if the correct input isn't provided by the user.
+
 ### Future Features
 
 The possible future features that could be implemented in the game are:
