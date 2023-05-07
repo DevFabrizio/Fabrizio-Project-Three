@@ -206,7 +206,7 @@ def run_game():
     Within are called the functions to print the rules, get the user input for the name 
     create the grid and print the grid to the terminal.
     """
-    # slow_print_effect(data.RULES, 0.02)
+    slow_print_effect(data.RULES, 0.02)
     get_user_battlename()
     time.sleep(1)
     create_grid()
@@ -237,4 +237,3 @@ def run_game():
 
 run_game()
 
-# controlla le validazioni e aggiungi un pò di spazi tra le print le serve
