@@ -41,6 +41,10 @@ The following is a series of screen shots taken from the terminal in order to di
 
 This is the first feature shown when the user starts the game. This welcome message is also used to provide the instructions for the game. As many other times during the flow of the game, I have used a slow typing effect in order to convey a sense of dynamism to an otherwise static terminal.
 
+![](docs/images/battlename-validation.png)
+
+In this second feature it's possible to see how the validation works for the user battle name input works. I have implemented the logic to only allow alphabetic characters so an empty input or any other combination will not work and the input will be prompted again. 
+
 ### Future Features
 
 The possible future features that could be implemented in the game are:
