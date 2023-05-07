@@ -37,7 +37,9 @@ Obviously the only interactions possible in a text based game that runs in a ter
 
 The following is a series of screen shots taken from the terminal in order to display the features used in the game:
 
-![]
+![](docs/images/welcome-message.png)
+
+This is the first feature shown when the user starts the game. This welcome message is also used to provide the instructions for the game. As many other times during the flow of the game, I have used a slow typing effect in order to convey a sense of dynamism to an otherwise static terminal.
 
 ### Future Features
 
