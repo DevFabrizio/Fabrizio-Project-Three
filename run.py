@@ -48,7 +48,7 @@ def get_user_battlename():
 
     global USER
     while True:
-        USER = input(slow_print_effect('Enter your battle name: ', 0.02))
+        USER = input(slow_print_effect('Enter your battle name: \n', 0.02))
 
         if USER.isalpha():
             slow_print_effect(f"Welcome {USER}, get ready for battle!", 0.02)
@@ -64,7 +64,7 @@ time.sleep(2)
 clear_screen()
 
 
-print()
+print('\n')
 
 
 def create_grid():
@@ -161,7 +161,7 @@ def get_user_shot():
     """
     while True:
         try:
-            row_guess = int(input('Insert your row coordinates (From 1 to 8): '))
+            row_guess = int(input('Insert your row coordinates (From 1 to 8): \n'))
             if row_guess < 1 or row_guess > 8:
                 slow_print_effect('Your input MUST be a number between 1 and 8!\n', 0.02)
             else:
@@ -170,7 +170,7 @@ def get_user_shot():
             slow_print_effect('Enter a number between 1 and 8\n', 0.02)
     while True:
         try:
-            column = input('Insert your column coordinates (From A to H): ')
+            column = input('Insert your column coordinates (From A to H): \n')
             if column not in 'ABCDEFGH':
                 slow_print_effect('Wrong coordinate\n', 0.02) 
                 slow_print_effect('Enter a capital letter between A to H\n', 0.02)
