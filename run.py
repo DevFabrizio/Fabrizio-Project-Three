@@ -1,3 +1,5 @@
+# modules used throught the program
+
 import time
 import sys
 import data
@@ -250,6 +252,6 @@ def run_game():
         print_grid()
 
 
-# run_game()
+run_game()
 play_another_round()
 
