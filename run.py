@@ -73,16 +73,16 @@ def create_grid():
     """
     Creates a grid to play the game
     """
-    global computer_row
+    global COMPUTER_ROW
 
     for i in range(GRID_SIZE):
         user_row = []
-        computer_row = []
+        COMPUTER_ROW = []
         for j in range(GRID_SIZE):
             user_row.append('-')
-            computer_row.append('-')
+            COMPUTER_ROW.append('-')
         user_grid.append(user_row)
-        computer_grid.append(computer_row)
+        computer_grid.append(COMPUTER_ROW)
 
 def print_grid():
 
