@@ -209,7 +209,9 @@ def play_another_round():
         time.sleep(2)
         clear_screen()
     else:
-        slow_print_effect('Please input "yes" or "no"', 0.02)
+        slow_print_effect('Please input "yes" or "no"\n', 0.02)
+        play_another_round()
+        
 
 
 def run_game():
@@ -248,6 +250,6 @@ def run_game():
         print_grid()
 
 
-run_game()
+# run_game()
 play_another_round()
 
