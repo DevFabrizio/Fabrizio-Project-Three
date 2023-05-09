@@ -21,7 +21,7 @@ column_nums = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7}
 
 
 
-def slow_print_effect(text, t):
+def slow_print_effect(text, time):
 
     """
     Function to substitute the print function to create slow typing effect
@@ -33,7 +33,7 @@ def slow_print_effect(text, t):
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(t)
+        time.sleep(time)
     return ''
 
 
