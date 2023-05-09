@@ -2,9 +2,9 @@
 
 import time
 import sys
-import data
 import os
 import random
+import data
 
 
 # list of global variables used
