@@ -11,7 +11,7 @@ import data
 
 # list of global variables used
 
-grid_size = 8
+GRID_SIZE = 8
 user_grid = []
 computer_grid = []
 user_ships = []
@@ -75,10 +75,10 @@ def create_grid():
     """
     global computer_row
 
-    for i in range(grid_size):
+    for i in range(GRID_SIZE):
         user_row = []
         computer_row = []
-        for j in range(grid_size):
+        for j in range(GRID_SIZE):
             user_row.append('-')
             computer_row.append('-')
         user_grid.append(user_row)
@@ -93,7 +93,7 @@ def print_grid():
     print('\n')
     slow_print_effect('  A   B   C   D   E   F   G   H       '
                       ' A   B   C   D   E   F   G   H\n', 0.01)
-    for i in range(grid_size):
+    for i in range(GRID_SIZE):
         print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' 
         + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
 
@@ -133,8 +133,8 @@ def generate_computer_shot():
     return: a list of random integers from 0 to 7
     """
     while True:
-        row_guess = random.randint(0, grid_size - 1)
-        column_guess = random.randint(0, grid_size - 1)
+        row_guess = random.randint(0, GRID_SIZE - 1)
+        column_guess = random.randint(0, GRID_SIZE - 1)
         if [row_guess, column_guess] not in computer_shots:
             break
     computer_shots.append([row_guess, column_guess])
@@ -233,7 +233,6 @@ def run_game():
     create_grid()
     user_ships_position()
     computer_ships_position()
-
     print_grid()
     guess_attempt = 0
     while True:
