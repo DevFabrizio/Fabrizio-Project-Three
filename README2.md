@@ -100,6 +100,14 @@ The validatons are also necessary in order to allow the user to insert the corre
 
 ### Deployment Steps
 
+The deployment of this project was made on Heroku instead of GitHub Pages. The steps I followed are the following:
+ * Open the Heroku app and access my account
+ * Created a new app for the project
+ * Insert the Python and Node.js settings in the correct order
+ * Insert the Key: PORT and Value: 8000 in the Config Var section
+ * Linked my GitHub repo in the settings
+ * Deployed manually in the "Deploy" section
+
 ## Development
 
 ### Software Maintenance and Updates
