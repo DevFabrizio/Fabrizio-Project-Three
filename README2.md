@@ -57,6 +57,10 @@ Finally the grids are printed to the terminal. I decided to placed them side by 
 
 This feature is about the input for the coordinates that the user wants to target. Only the row validation is shown in the image but the logic and presentation is the same for the column input as well. The only difference is that for the rows I have used a "numeric only" data type and for the columns a "capital alphabetic only". In both cases the game will not proceed if the correct input isn't provided by the user.
 
+![](docs/images/next-round-input.png)
+
+This message is what appears once either the player or the cpu wins the game. The result is to run another game for a positive input and to exit the game for a negative one. The negative outcome (exiting the game) has been timed with a clear screen function at the end to emphasize the impression of the end of the software.
+
 ### Future Features
 
 The possible future features that could be implemented in the game are:
