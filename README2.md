@@ -1,6 +1,8 @@
 # Fabrizio Milestone Project 3
 
-#### [Link to Deployed Project]()
+#### [Link to Deployed Project](https://fabrizio-project-three.herokuapp.com/)
+
+![](docs/images/responsive-design.png)
 
 ## Introduction
 
