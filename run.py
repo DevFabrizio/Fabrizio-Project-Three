@@ -25,7 +25,7 @@ def slow_print_effect(text, timing):
 
     """
     Function to substitute the print function to create slow typing effect
-    Args: text is for the string that the function prints and "t" is for the
+    Args: text is for the string that the function prints and "timing" is for the
     amount of time we want to delay the printing of the next character
     on the terminal
     """
@@ -114,7 +114,8 @@ def user_ships_position():
 
 def computer_ships_position():
     """
-    Function to generate the computer ships using the same logic as the user ships
+    Function to generate the computer ships using the same logic
+    as the user ships
     but without showing the ships on the grid
     """
     for i in range(8):
@@ -165,7 +166,8 @@ def get_user_shot():
         try:
             row_guess = int(input('Insert your row coordinates (From 1 to 8): \n'))
             if row_guess < 1 or row_guess > 8:
-                slow_print_effect('Your input MUST be a number between 1 and 8!\n', 0.02)
+                slow_print_effect('Your input MUST be a number' 
+                                  'between 1 and 8!\n', 0.02)
             else:
                 break
         except ValueError:
@@ -175,12 +177,14 @@ def get_user_shot():
             column = input('Insert your column coordinates (From A to H): \n')
             if column not in 'ABCDEFGH':
                 slow_print_effect('Wrong coordinate\n', 0.02) 
-                slow_print_effect('Enter a capital letter between A to H\n', 0.02)
+                slow_print_effect('Enter a capital letter' 
+                                  'between A to H\n', 0.02)
             else:
                 column_guess = column_nums[column]
                 break
         except KeyError:
-            ('Your column coordinate must be a capital letter from A to H\n', 0.02)
+            ('Your column coordinate must be a' 
+             'capital letter from A to H\n', 0.02)
     return [row_guess - 1, column_guess]
 
 
@@ -224,7 +228,8 @@ def run_game():
 
     """
     Function to run the game. 
-    Within are called the functions to print the rules, get the user input for the name 
+    Within are called the functions to print the rules, 
+    get the user input for the name 
     create the grid and print the grid to the terminal.
     """
     slow_print_effect(data.RULES, 0.02)
@@ -240,14 +245,16 @@ def run_game():
         guess_attempt += 1
         if check_user_shot(guess):
             if not computer_ships:
-                slow_print_effect(f"It took you {guess_attempt} shots to sink all the"  
-                                  f" enemy's ships!\n You've won the battle", 0.02)
+                slow_print_effect(f"It took you {guess_attempt}" 
+                                  f"shots to sink all the enemy's ships!\n"  
+                                  f"You've won the battle", 0.02)
                 break
         cpu_guess_position = generate_computer_shot()
         check_computer_shot(cpu_guess_position)
 
         if not user_ships:
-            slow_print_effect(f"The enemy sunk your ships in {guess_attempt} turns"
+            slow_print_effect(f"The enemy sunk your ships in" 
+                              f"{guess_attempt} turns"
                               f" You have lost this battle!", 0.02)
             break
         time.sleep(2)
