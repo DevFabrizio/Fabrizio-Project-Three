@@ -1,4 +1,6 @@
-# modules used throught the program
+"""
+List of module imports
+"""
 
 import time
 import sys
