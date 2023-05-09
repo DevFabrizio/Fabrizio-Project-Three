@@ -92,7 +92,8 @@ def print_grid():
     
     print(f"     {USER}'s Grid                                  Enemy's Grid")
     print('\n')
-    slow_print_effect('  A   B   C   D   E   F   G   H        A   B   C   D   E   F   G   H\n', 0.01)
+    slow_print_effect('  A   B   C   D   E   F   G   H       '
+                      ' A   B   C   D   E   F   G   H\n', 0.01)
     for i in range(grid_size):
         print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' 
         + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
@@ -202,6 +203,10 @@ def check_user_shot(guess):
 
 
 def play_another_round():
+    """
+    Function to play another round
+    through user input request
+    """
     next_round = input(slow_print_effect('Do you want to play another round?' 
                                          '("yes" or "no") \n', 0.02)).lower()
     if next_round == 'yes':
