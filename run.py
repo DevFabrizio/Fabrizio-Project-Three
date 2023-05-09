@@ -199,6 +199,19 @@ def check_user_shot(guess):
         computer_grid[row_guess][column_guess] = 'M'
 
 
+def play_another_round():
+    next_round = input(slow_print_effect('Do you want to play another round?' 
+                                         '("yes" or "no") \n', 0.02)).lower()
+    if next_round == 'yes':
+        run_game()
+    elif next_round == 'no':
+        slow_print_effect('Exiting the game...', 0.04)
+        time.sleep(2)
+        clear_screen()
+    else:
+        slow_print_effect('Please input "yes" or "no"', 0.02)
+
+
 def run_game():
 
     """
@@ -236,4 +249,5 @@ def run_game():
 
 
 run_game()
+play_another_round()
 
