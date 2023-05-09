@@ -96,7 +96,8 @@ The validatons are also necessary in order to allow the user to insert the corre
 |--------------------|--------------------------|-------------------------------------------------------------------------------------|-----------------------------------|---|
 | User battle name   | The game runs correctly  | The game gives suggestions on the correction to make.  Runs the input request again | The game waits for the user input |
 | Row coordinates    | The game runs correctly  | The game alerts the user of the wrong input. Runs the input request again  | The game waits for the user input | 
-| Column coordinates | The game runs correctly |  The game alerts the user of the wrong input. Runs the input request again  | The game waits for the user input | | Next round | In case of 'yes' the game runs another game. In case of 'no' the game ends | The game asks for a correct input and runs the request again. | The game waits for user input |
+| Column coordinates | The game runs correctly |  The game alerts the user of the wrong input. Runs the input request again  | The game waits for the user input | 
+| Next round | In case of 'yes' the game runs another game. In case of 'no' the game ends | The game asks for a correct input and runs the request again. | The game waits for user input |
 
 ## Deployment and Updates
 
