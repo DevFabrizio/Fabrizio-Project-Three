@@ -59,12 +59,10 @@ def get_user_battlename():
         else:
             slow_print_effect('You must enter a valid name!\n', 0.02)
 
-
 time.sleep(2)
 
 
 clear_screen()
-
 
 print('\n')
 
@@ -89,7 +87,6 @@ def print_grid():
     """
     Function to print the grid
     """
-    
     print(f"     {USER}'s Grid                                  Enemy's Grid")
     print('\n')
     slow_print_effect('  A   B   C   D   E   F   G   H       '
@@ -259,4 +256,3 @@ def run_game():
 
 run_game()
 play_another_round()
-
