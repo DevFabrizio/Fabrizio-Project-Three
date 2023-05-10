@@ -7,7 +7,9 @@ import sys
 import os
 import random
 import data
+import colorama
 
+colorama.init()
 
 # list of global variables used
 
@@ -50,7 +52,7 @@ def get_user_battlename():
     """
     Function to get and validate user battle name
     """
-    
+
     global USER
     while True:
         try:
@@ -65,7 +67,7 @@ def get_user_battlename():
             else:
                 slow_print_effect('You must enter a valid name!\n', 0.02)
         except ValueError:
-            print('Error getting user input')
+            print(colorama.Fore.RED + 'Error getting user input')
 
 
 def create_grid():
@@ -96,8 +98,8 @@ def print_grid():
     slow_print_effect('  A   B   C   D   E   F   G   H       '
                       ' A   B   C   D   E   F   G   H\n', 0.01)
     for i in range(GRID_SIZE):
-        print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' 
-        + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
+        print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      '
+              + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
 
 
 def user_ships_position():
@@ -126,8 +128,8 @@ def computer_ships_position():
 
     for i in range(8):
         while True:
-            row_position = random.randint(0, 8 -1)
-            column_position = random.randint(0, 8 -1)
+            row_position = random.randint(0, 8 - 1)
+            column_position = random.randint(0, 8 - 1)
             if [row_position, column_position] not in computer_ships:
                 break
         computer_ships.append([row_position, column_position])
@@ -136,10 +138,10 @@ def computer_ships_position():
 def generate_computer_shot():
 
     """
-    Function to generate computer shots attempt with a random number for row 
+    Function to generate computer shots attempt with a random number for row
     and column
     Return:
-         a list of random integers from 0 to 7
+        a list of random integers from 0 to 7
     """
 
     while True:
@@ -155,7 +157,7 @@ def check_computer_shot(guess):
 
     """
     Function to check if the computer shot it or missed a user ship
-    Args: 
+    Args:
         guess is set to define the row and column guess
     """
 
@@ -179,27 +181,28 @@ def get_user_shot():
 
     while True:
         try:
-            row_guess = int(input('Insert your row coordinates (From 1 to 8): \n'))
+            row_guess = int(input('Insert your row coordinates'
+                                  '(From 1 to 8): \n'))
             if row_guess < 1 or row_guess > 8:
-                slow_print_effect('Your input MUST be a number' 
+                slow_print_effect('Your input MUST be a number'
                                   'between 1 and 8!\n', 0.02)
             else:
                 break
         except ValueError:
             slow_print_effect('Enter a number between 1 and 8\n', 0.02)
-            
+
     while True:
         try:
             column = input('Insert your column coordinates (From A to H): \n')
             if column not in 'ABCDEFGH':
-                slow_print_effect('Wrong coordinate\n', 0.02) 
-                slow_print_effect('Enter a capital letter' 
+                slow_print_effect('Wrong coordinate\n', 0.02)
+                slow_print_effect('Enter a capital letter'
                                   'between A to H\n', 0.02)
             else:
                 column_guess = column_nums[column]
                 break
         except KeyError:
-            ('Your column coordinate must be a' 
+            ('Your column coordinate must be a'
              'capital letter from A to H\n', 0.02)
     return [row_guess - 1, column_guess]
 
@@ -208,18 +211,20 @@ def check_user_shot(guess):
 
     """
     Function to check the user guess
-    Args: 
+    Args:
         guess is set to define row and column guess
     """
 
     row_guess, column_guess = guess
     if [row_guess, column_guess] in computer_ships:
-        print("That's a hit! Well done!\n")
+        print(colorama.Fore.GREEN + "That's a hit! Well done!\n")
+        print(colorama.Fore.RESET)
         computer_ships.remove([row_guess, column_guess])
-        computer_grid[row_guess][column_guess] = 'H'    
+        computer_grid[row_guess][column_guess] = 'H'
         return True
     else:
-        print('You missed!\n')
+        print(colorama.Fore.RED + 'You missed!\n')
+        print(colorama.Fore.RESET)
         computer_grid[row_guess][column_guess] = 'M'
 
 
@@ -230,7 +235,7 @@ def play_another_round():
     through user input request
     """
 
-    next_round = input(slow_print_effect('Do you want to play another round?' 
+    next_round = input(slow_print_effect('Do you want to play another round?'
                                          '("yes" or "no") \n', 0.02)).lower()
     if next_round == 'yes':
         run_game()
@@ -241,15 +246,14 @@ def play_another_round():
     else:
         slow_print_effect('Please input "yes" or "no"\n', 0.02)
         play_another_round()
-        
 
 
 def run_game():
 
     """
-    Function to run the game. 
-    Within are called the functions to print the rules 
-    get the user input for the name 
+    Function to run the game.
+    Within are called the functions to print the rules
+    get the user input for the name
     create the grid and print the grid to the terminal.
     """
 
@@ -268,15 +272,15 @@ def run_game():
         guess_attempt += 1
         if check_user_shot(guess):
             if not computer_ships:
-                slow_print_effect(f"It took you {guess_attempt}" 
-                                  f"shots to sink all the enemy's ships!\n"  
+                slow_print_effect(f"It took you {guess_attempt}"
+                                  f"shots to sink all the enemy's ships!\n"
                                   f"You've won the battle", 0.02)
                 break
         cpu_guess_position = generate_computer_shot()
         check_computer_shot(cpu_guess_position)
 
         if not user_ships:
-            slow_print_effect(f"The enemy sunk your ships in" 
+            slow_print_effect(f"The enemy sunk your ships in"
                               f"{guess_attempt} turns"
                               f" You have lost this battle!", 0.02)
             break
