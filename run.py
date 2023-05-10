@@ -61,13 +61,6 @@ def get_user_battlename():
         else:
             slow_print_effect('You must enter a valid name!\n', 0.02)
 
-# time.sleep(2)
-
-
-# clear_screen()
-
-# print('\n')
-
 
 def create_grid():
 
@@ -184,6 +177,7 @@ def get_user_shot():
                 break
         except ValueError:
             slow_print_effect('Enter a number between 1 and 8\n', 0.02)
+            
     while True:
         try:
             column = input('Insert your column coordinates (From A to H): \n')
@@ -256,7 +250,7 @@ def run_game():
     computer_ships_position()
     print_grid()
     guess_attempt = 0
-    
+
     while True:
         guess = get_user_shot()
         guess_attempt += 1
