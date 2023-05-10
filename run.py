@@ -20,7 +20,6 @@ computer_shots = []
 column_nums = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7}
 
 
-
 def slow_print_effect(text, timing):
 
     """
@@ -38,6 +37,7 @@ def slow_print_effect(text, timing):
 
 
 def clear_screen():
+
     """
     Function to clear the screen
     """
@@ -61,15 +61,16 @@ def get_user_battlename():
         else:
             slow_print_effect('You must enter a valid name!\n', 0.02)
 
-time.sleep(2)
+# time.sleep(2)
 
 
-clear_screen()
+# clear_screen()
 
-print('\n')
+# print('\n')
 
 
 def create_grid():
+
     """
     Creates a grid to play the game
     """
@@ -84,11 +85,13 @@ def create_grid():
         user_grid.append(user_row)
         computer_grid.append(COMPUTER_ROW)
 
+
 def print_grid():
 
     """
     Function to print the grid
     """
+
     print(f"     {USER}'s Grid                                  Enemy's Grid")
     print('\n')
     slow_print_effect('  A   B   C   D   E   F   G   H       '
@@ -97,11 +100,13 @@ def print_grid():
         print(str(i + 1) + ' ' + ' / '.join(user_grid[i]) + '      ' 
         + str(i + 1) + ' ' + ' / '.join(computer_grid[i]))
 
+
 def user_ships_position():
 
     """
     Function to position the user ships on the grid
     """
+
     for i in range(8):
         while True:
             row_position = random.randint(0, 8 -1)
@@ -113,11 +118,13 @@ def user_ships_position():
 
 
 def computer_ships_position():
+
     """
     Function to generate the computer ships using the same logic
     as the user ships
     but without showing the ships on the grid
     """
+
     for i in range(8):
         while True:
             row_position = random.randint(0, 8 -1)
@@ -128,11 +135,13 @@ def computer_ships_position():
 
 
 def generate_computer_shot():
+
     """
     Function to generate computer shots attempt with a random number for row 
     and column
     return: a list of random integers from 0 to 7
     """
+
     while True:
         row_guess = random.randint(0, GRID_SIZE - 1)
         column_guess = random.randint(0, GRID_SIZE - 1)
@@ -143,10 +152,12 @@ def generate_computer_shot():
 
 
 def check_computer_shot(guess):
+
     """
     Function to check if the computer shot it or missed a user ship
     Args: guess is set to define the row and column guess
     """
+
     row_guess, column_guess = guess
     if [row_guess, column_guess] in user_ships:
         slow_print_effect('The enemy just sunk one of your ships!!!\n', 0.02)
@@ -162,6 +173,7 @@ def get_user_shot():
     """
     Function to collect user input for row and column coordinates
     """
+
     while True:
         try:
             row_guess = int(input('Insert your row coordinates (From 1 to 8): \n'))
@@ -194,6 +206,7 @@ def check_user_shot(guess):
     Function to check the user guess
     args: guess is set to define row and column guess
     """
+
     row_guess, column_guess = guess
     if [row_guess, column_guess] in computer_ships:
         print("That's a hit! Well done!\n")
@@ -206,10 +219,12 @@ def check_user_shot(guess):
 
 
 def play_another_round():
+
     """
     Function to play another round
     through user input request
     """
+
     next_round = input(slow_print_effect('Do you want to play another round?' 
                                          '("yes" or "no") \n', 0.02)).lower()
     if next_round == 'yes':
@@ -228,10 +243,11 @@ def run_game():
 
     """
     Function to run the game. 
-    Within are called the functions to print the rules, 
+    Within are called the functions to print the rules 
     get the user input for the name 
     create the grid and print the grid to the terminal.
     """
+
     slow_print_effect(data.RULES, 0.02)
     get_user_battlename()
     time.sleep(1)
@@ -240,6 +256,7 @@ def run_game():
     computer_ships_position()
     print_grid()
     guess_attempt = 0
+    
     while True:
         guess = get_user_shot()
         guess_attempt += 1
