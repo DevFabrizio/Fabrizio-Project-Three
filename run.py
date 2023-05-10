@@ -182,10 +182,10 @@ def get_user_shot():
     while True:
         try:
             row_guess = int(input('Insert your row coordinates'
-                                  '(From 1 to 8): \n'))
+                                  ' (From 1 to 8): \n'))
             if row_guess < 1 or row_guess > 8:
                 slow_print_effect('Your input MUST be a number'
-                                  'between 1 and 8!\n', 0.02)
+                                  ' between 1 and 8!\n', 0.02)
             else:
                 break
         except ValueError:
@@ -197,13 +197,13 @@ def get_user_shot():
             if column not in 'ABCDEFGH':
                 slow_print_effect('Wrong coordinate\n', 0.02)
                 slow_print_effect('Enter a capital letter'
-                                  'between A to H\n', 0.02)
+                                  ' between A to H\n', 0.02)
             else:
                 column_guess = column_nums[column]
                 break
         except KeyError:
             ('Your column coordinate must be a'
-             'capital letter from A to H\n', 0.02)
+             ' capital letter from A to H\n', 0.02)
     return [row_guess - 1, column_guess]
 
 
