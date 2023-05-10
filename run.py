@@ -245,6 +245,7 @@ def run_game():
     slow_print_effect(data.RULES, 0.02)
     get_user_battlename()
     time.sleep(1)
+    clear_screen()
     create_grid()
     user_ships_position()
     computer_ships_position()
