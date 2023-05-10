@@ -96,7 +96,7 @@ The validations are also necessary in order to allow the user to insert the corr
 
 | Test         | Valid input            | Invalid input                                                                         | No input                          |   |
 |--------------------|--------------------------|-------------------------------------------------------------------------------------|-----------------------------------|---|
-| User battle name   | The game runs correctly  | The game gives suggestions on the correction to make.  Runs the input request again | The game waits for the user input |
+| User battle name input  | The game runs correctly  | The game gives suggestions on the correction to make.  Runs the input request again | The game waits for the user input |
 | Row coordinates    | The game runs correctly  | The game alerts the user of the wrong input. Runs the input request again  | The game waits for the user input | 
 | Column coordinates | The game runs correctly |  The game alerts the user of the wrong input. Runs the input request again  | The game waits for the user input | 
 | Next round | In case of 'yes' the game runs another game. In case of 'no' the game ends | The game asks for a correct input and runs the request again. | The game waits for user input |
@@ -114,6 +114,10 @@ The deployment of this project was made on Heroku instead of GitHub Pages. The s
  * Deployed manually in the "Deploy" section
 
 ## Development
+
+### For the next Programmer
+
+The code has been structured to allow the next developers to easily access the parts of the program that they would like to change. This has been done by creating a series of functions with granular specificity. This permits to fine tune the next changes to only the parts that we want to modify. 
 
 ### Software Maintenance and Updates
 
