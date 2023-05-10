@@ -24,9 +24,10 @@ def slow_print_effect(text, timing):
 
     """
     Function to substitute the print function to create slow typing effect
-    Args: text is for the string that the function prints and "timing" is for the
-    amount of time we want to delay the printing of the next character
-    on the terminal
+​
+    Args:
+        text: the text to print
+        timing: the print interval
     """
 
     for character in text:
@@ -102,8 +103,8 @@ def user_ships_position():
 
     for i in range(8):
         while True:
-            row_position = random.randint(0, 8 -1)
-            column_position = random.randint(0, 8 -1)
+            row_position = random.randint(0, 8 - 1)
+            column_position = random.randint(0, 8 - 1)
             if [row_position, column_position] not in user_ships:
                 break
         user_ships.append([row_position, column_position])
@@ -132,7 +133,8 @@ def generate_computer_shot():
     """
     Function to generate computer shots attempt with a random number for row 
     and column
-    return: a list of random integers from 0 to 7
+    Return:
+         a list of random integers from 0 to 7
     """
 
     while True:
@@ -148,7 +150,8 @@ def check_computer_shot(guess):
 
     """
     Function to check if the computer shot it or missed a user ship
-    Args: guess is set to define the row and column guess
+    Args: 
+        guess is set to define the row and column guess
     """
 
     row_guess, column_guess = guess
@@ -165,6 +168,8 @@ def get_user_shot():
 
     """
     Function to collect user input for row and column coordinates
+    Returns:
+        list of row and column guess
     """
 
     while True:
@@ -198,7 +203,8 @@ def check_user_shot(guess):
 
     """
     Function to check the user guess
-    args: guess is set to define row and column guess
+    Args: 
+        guess is set to define row and column guess
     """
 
     row_guess, column_guess = guess
