@@ -89,10 +89,12 @@ During the creation of this program I have encountered many bugs. I was able to 
 
 ### Validation
 
-In order to validate the code a series of user input validation checks have been put into place to ensure a smooth run of the program.
-The validatons are also necessary in order to allow the user to insert the correct data type or input. The following is a table with the validations applied:
+### Manual Testing
 
-| Validation         | Correct input            | Wrong input                                                                         | No input                          |   |
+In order to manually test the code a series of user input validation checks have been put into place to ensure a smooth run of the program.
+The validations are also necessary in order to allow the user to insert the correct data type or input. The following is a table with the tests applied:
+
+| Test         | Valid input            | Invalid input                                                                         | No input                          |   |
 |--------------------|--------------------------|-------------------------------------------------------------------------------------|-----------------------------------|---|
 | User battle name   | The game runs correctly  | The game gives suggestions on the correction to make.  Runs the input request again | The game waits for the user input |
 | Row coordinates    | The game runs correctly  | The game alerts the user of the wrong input. Runs the input request again  | The game waits for the user input | 
