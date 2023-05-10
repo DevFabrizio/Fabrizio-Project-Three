@@ -50,17 +50,22 @@ def get_user_battlename():
     """
     Function to get and validate user battle name
     """
-
+    
     global USER
     while True:
-        USER = input(slow_print_effect('Enter your battle name: \n', 0.02))
+        try:
+            USER = input(slow_print_effect('Enter your battle name: \n', 0.02))
 
-        if USER.isalpha():
-            slow_print_effect(f"Welcome {USER}, get ready for battle!", 0.02)
-            print('\n\n\n')
-            break
-        else:
-            slow_print_effect('You must enter a valid name!\n', 0.02)
+            if USER.isalpha():
+                slow_print_effect(
+                    f"Welcome {USER}, get ready for battle!", 0.02
+                )
+                print('\n\n\n')
+                break
+            else:
+                slow_print_effect('You must enter a valid name!\n', 0.02)
+        except ValueError:
+            print('Error getting user input')
 
 
 def create_grid():
