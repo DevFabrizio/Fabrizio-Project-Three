@@ -31,6 +31,12 @@ As a User I want to:
 * Evaluate if the enemy hit or missed my ships
 * Repeat the row and column selection until game completion
 
+## Software Logic
+
+![](docs/images/pp3-flowchart.png)
+
+The image above is a visual representation of the logic of the software. In order to avoid any faulty run of the game, a series of validations have been implemented. During the execution of the various functions the game will not proceed unless the required imput from the user is validated. This is to ensure that the data provided by the user is exactly what the respective function was expecting.
+
 ## Interactions and Features
 
 Obviously the only interactions possible in a text based game that runs in a terminal are text input and some mouse clicking. When it comes to features though, I have decided to include some different solutions to make the game easy to understand for the user. Some of these features include validation of the user's input and a correct distribution of the text on the terminal.
