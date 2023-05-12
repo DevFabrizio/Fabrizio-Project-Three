@@ -95,6 +95,12 @@ During the creation of this program I have encountered many bugs. I was able to 
 
 ### Validation
 
+### Python Linter
+
+The following is the result of the linter provided by Code Insitute. 
+
+![](docs/images/CI-linter.png)
+
 ### Manual Testing
 
 In order to manually test the code a series of user input validation checks have been put into place to ensure a smooth run of the program.
