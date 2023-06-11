@@ -274,7 +274,7 @@ def run_game():
             if not computer_ships:
                 slow_print_effect(f"It took you {guess_attempt}"
                                   f"shots to sink all the enemy's ships!\n"
-                                  f"You've won the battle", 0.02)
+                                  f"You've won the battle\n", 0.02)
                 break
         cpu_guess_position = generate_computer_shot()
         check_computer_shot(cpu_guess_position)
