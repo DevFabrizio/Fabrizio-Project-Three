@@ -140,4 +140,7 @@ A correct indentation has been used in the code to allow future developers to ma
 For this game I have used the following websites for development and testing:
 * [Tables Generator](https://tablesgenerator.com/) for the markdown table.
 * [Python Tutor](https://pythontutor.com/) for the debugging
+* [Heroku](https://www.heroku.com/platform) for the deployment
+* [GitHub](https://www.heroku.com/platform) as the repository platform
+* [Codeanywhere](https://www.heroku.com/platform) as the cloud-based code editor
 
